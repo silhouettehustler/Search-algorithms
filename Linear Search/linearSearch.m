@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title:     Linear Search Algorithm
-% Author:    Ian van der Linde
-% Rev. Date: 11-02-17
+% Author:    Mateja Glusac
+% Rev. Date: 09-04-2017
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [numComparisons, currentIndex] = linearSearch(V, target)
