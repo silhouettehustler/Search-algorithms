@@ -39,7 +39,7 @@ legend('min','mean','max');
 
 plot([1:maxArraySize], linspace(1,1,maxArraySize), 'k:');
 plot([1:maxArraySize], linspace(1,N/2,maxArraySize), 'k:');
-plot([1:maxArraySize], linspace(1,N,maxArraySize), 'k:');
+plot([1:maxArraySize], linspace(1,log(0),maxArraySize), 'k:');
 
 % Annotate Chart
 
@@ -49,4 +49,4 @@ title('Random Search (Successful)','FontSize', 14);
 xlim([0 maxArraySize]);
 ylim([0 max(max_comps)]);
 
-print -f1 -r300 -dbmp linearSearchSuccessful.bmp
+print -f1 -r300 -dbmp randomSearchSuccessful.bmp
