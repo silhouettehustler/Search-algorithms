@@ -7,7 +7,7 @@
 clear all;close all;clc;
 
 maxArraySize = 1024;
-maxComparisons = 100;
+maxComparisons = 10;
 
 for N = 1:maxArraySize    
     
