@@ -40,8 +40,8 @@ legend('min','mean','max');
 % Plot Expected
 
 plot([1:maxArraySize], linspace(1,1,maxArraySize), 'k:');
-plot([1:maxArraySize], linspace(1,log2(N +1)+1,maxArraySize), 'k:');
-plot([1:maxArraySize], linspace(1,log2(N+1),maxArraySize), 'k:');
+plot([1:maxArraySize], linspace(1,log(N),maxArraySize), 'k:');
+plot([1:maxArraySize], linspace(1,log (N),maxArraySize), 'k:');
 
 % Annotate Chart
 

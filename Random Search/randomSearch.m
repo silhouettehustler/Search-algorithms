@@ -3,38 +3,25 @@
 % Author:    Mateja Glusac
 % Rev. Date: 09-04-2017
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [numComparisons, currentIndex] = randomSearch(V, target,maxComparisons)
+function [numComparisons, currentIndex] = randomSearch(V, target)
       
     numComparisons = 0; 
+    currentIndex = -1;
+    low = 1;
+    high = length(V);
     
-    %execute this chunk of code forever
-    while true
-        
-        %genereate and store the value of a random number between the
-        %minimum value of the array and the maximum value of the array
-        randomIndex = randi([min(V), max(V)]);
-        
-        %increment the number of comparisons by 1
-        numComparisons = numComparisons + 1;
-        
-        %if random index of the array is equal to target
+    while true           
+        randomIndex = randi([low high],1);     
          if(V(randomIndex) == target)
-             
-             %set value of the random index to the current index and break
-             %out of the loop
+              numComparisons = numComparisons + 1;
              currentIndex = randomIndex;            
-            break;
-            
-         end
-        
-         %if number of comparisons is greater than the predefined maximum
-         %number of comparisons
-         if(numComparisons >= maxComparisons)
-             
-             %set current index to -1
-            currentIndex = -1;
-         end
-         
+            break;            
+         elseif V(randomIndex) < target
+              numComparisons = numComparisons + 1;
+             low = low + 1;
+         elseif V(randomIndex) > target
+             numComparisons = numComparisons + 1;
+             high = high -1;             
+         end         
      end       
 end

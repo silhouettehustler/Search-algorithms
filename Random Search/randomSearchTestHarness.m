@@ -7,14 +7,13 @@
 clear all;close all;clc;
 
 maxArraySize = 1024;
-maxComparisons = 10;
 
 for N = 1:maxArraySize    
     
-    array = randperm(N);
+    array = 1:maxArraySize;
     
     for searchTarget = 1:N       
-        comparisons(searchTarget) = randomSearch(array, searchTarget,maxComparisons);        
+        comparisons(searchTarget) = randomSearch(array, searchTarget);        
     end
     
     min_comps(N) = min(comparisons);  
@@ -39,7 +38,7 @@ legend('min','mean','max');
 
 plot([1:maxArraySize], linspace(1,1,maxArraySize), 'k:');
 plot([1:maxArraySize], linspace(1,N/2,maxArraySize), 'k:');
-plot([1:maxArraySize], linspace(1,log(0),maxArraySize), 'k:');
+plot([1:maxArraySize], linspace(1,N,maxArraySize), 'k:');
 
 % Annotate Chart
 
